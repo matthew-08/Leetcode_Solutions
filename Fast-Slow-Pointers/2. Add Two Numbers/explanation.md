@@ -10,7 +10,8 @@ It's important to note that long addition is done from right to left. Meaning th
 
 In this problem, that fact makes the reversed link list reasonable.
 
-2 -> 0 -> 1
+## 2 -> 0 -> 1
+
 2 -> 0 -> 1
 
 Here, the numbers they want us to add are reversed. The result we want is 102 + 102. Since we're performing simulated
