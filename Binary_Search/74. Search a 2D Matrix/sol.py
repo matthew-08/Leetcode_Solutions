@@ -16,6 +16,7 @@ class Solution:
                         left = mid + 1
                     else: return True
             return False
+            
 ## My first (extremely lengthy and ridiculous) optimized solution.
 ## Here, I'm first going to the subarray at the middle position of the the matrix.
 ## I then determine:
