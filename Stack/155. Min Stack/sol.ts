@@ -1,33 +1,26 @@
-class MinStack {
-  stack: number[];
-  minStack: number[];
-  constructor() {
-    this.stack = [];
-    this.minStack = [];
-  }
+function dailyTemperatures(temperatures: number[]): number[] {
+  const stack: [number, number][] = [];
+  //[temp, index]
+  const result = Array(temperatures.length).fill(0);
 
-  push(val: number): void {
-    this.stack.push(val);
-    if (
-      !this.minStack.length ||
-      this.minStack[this.minStack.length - 1] >= val
-    ) {
-      this.minStack.push(val);
+  for (let i = temperatures.length - 1; i <= 0; i--) {
+    if (!stack.length) {
+      result[i] = 0;
     } else {
-      this.minStack.push(this.getMin());
+      let val = stack.pop();
+      while (stack.length > 1 && val < temperatures[i]) {
+        val = stack.pop();
+      }
+      if (stack.length === 1) {
+        result[i] = 0;
+      } else {
+        result[i] === temperatures[1] - val[1];
+      }
+      stack.push(val);
     }
+    stack.push([temperatures[i], i]);
   }
-
-  pop(): void {
-    this.stack.pop();
-    this.minStack.pop();
-  }
-
-  top(): number {
-    return this.stack[this.stack.length - 1];
-  }
-
-  getMin(): number {
-    return this.minStack[this.minStack.length - 1];
-  }
+  console.log(result);
 }
+
+dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73]);
