@@ -1,17 +1,11 @@
-function twoSum(numbers: number[], target: number): number[] {
-  let l = 0;
-  let r = numbers.length - 1;
-
-  while (l < r) {
-    const sum = numbers[l] + numbers[r];
-    if (sum > target) {
-      r--;
-      continue;
-    }
-    if (sum < target) {
-      l++;
-      continue;
-    }
-    return [l + 1, r + 1];
+class ListNode {
+  val: number;
+  constructor(val: number) {
+    this.val = val;
   }
 }
+
+const map = new Map<ListNode, ListNode>();
+const ok = new ListNode(3);
+map.set(ok, new ListNode(2));
+console.log(map);
