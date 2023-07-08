@@ -8,7 +8,7 @@ function maxProfit(prices: number[]): number {
     const left = prices[l];
     const right = prices[r];
     const total = right - left;
- /*    if (total > runningTotal) {
+    if (total > runningTotal) {
       runningTotal = total;
     }
     if (lowestNum > prices[r]) {
@@ -19,4 +19,3 @@ function maxProfit(prices: number[]): number {
   }
   return runningTotal;
 }
- */
