@@ -11,5 +11,5 @@ function findMaxConsecutiveOnes(nums: number[]): number {
     best = Math.max(right - left + 1, best);
     right++;
   }
-  return best;
+  /* return best; */
 }
