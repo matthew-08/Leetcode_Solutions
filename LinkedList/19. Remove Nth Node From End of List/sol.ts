@@ -10,7 +10,7 @@
  * }
  */
 
-/* function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
+function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
   let slowP = head;
   let fastP = head;
 
@@ -28,4 +28,3 @@
   slowP.next = slowP.next.next;
   return head;
 }
- */
