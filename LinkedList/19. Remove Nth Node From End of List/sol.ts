@@ -19,10 +19,10 @@ function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
   }
 
   if (!fastP) return head.next;
-
+/* 
   while (fastP.next) {
     slowP = slowP.next;
-    fastP = fastP.next;
+    fastP = fastP.next; */
   }
 
   slowP.next = slowP.next.next;
